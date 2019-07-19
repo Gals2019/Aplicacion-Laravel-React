@@ -1,4 +1,5 @@
 <?php
+//use Symfony\Component\Routing\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get("/producto","ProductoController@index");
+Route::get("/producto/crear","ProductoController@crear");
+Route::post("/producto/guardar","ProductoController@guardar");
