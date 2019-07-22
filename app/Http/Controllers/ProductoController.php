@@ -3,31 +3,82 @@
 namespace LosPlatanos\Http\Controllers;
 
 use Illuminate\Http\Request;
-use LosPlatanos\Models\Productos;
-
 
 class ProductoController extends Controller
 {
-    public function index(){
-        $producto = Productos::all();
-
-        return view("producto.index", compact("producto"));
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
     }
-    public function crear(){
-        return view("producto.crear");
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
-    public function guardar(Request $request){
 
-        $datos=$request->all();
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
-        Productos::create([
-            "nombre"=>$datos["nombre"],
-            "precio"=>$datos["precio"],
-            "cantidad"=>$datos["cantidad"],
-        ]);
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-        return redirect("/producto");
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
 }
