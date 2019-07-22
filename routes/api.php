@@ -11,4 +11,8 @@
 
         });
         
+        Route::resource('/producto', 'ProductoController')->except('index','create', 'edit');
+
+        
+
 });
